@@ -26,9 +26,7 @@ int main() {
 
 
     string a , b ; cin >> a >> b;
-
-    int found = 0;
-
+    
     for(int i = 0 ; i < a.size() ; ++i) {
 
         if(a[i] >= 65 && a[i] <= 90) {
@@ -40,15 +38,19 @@ int main() {
         }
 
         if(a[i] > b[i]) {
-            found = 1;
-        } else if( a[i] < b[i] ) {
-            found = -1;
+            cout << 1 << endl;
+            return 0;
+        }
+
+        if(a[i] < b[i]) {
+            cout << -1 << endl;
+            return 0;
         }
 
     }
 
-    cout << found << endl;
-    return 0;
+    cout << 0 << endl;
+    return 0 ;
 }
 
 
